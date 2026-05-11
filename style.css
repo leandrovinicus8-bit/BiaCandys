@@ -1,0 +1,308 @@
+:root {
+    --primary-pink: #fce4ec;
+    --accent-pink: #f06292;
+    --deep-pink: #d81b60;
+    --sunflower-yellow: #fbc02d;
+    --white: #ffffff;
+    --text-color: #4a4a4a;
+    --bg-light: #fff5f8;
+    --shadow: 0 10px 30px rgba(240, 98, 146, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-pink);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(240, 98, 146, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--deep-pink);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(240, 98, 146, 0.4);
+}
+
+.btn-primary-outline {
+    display: inline-block;
+    border: 2px solid var(--accent-pink);
+    color: var(--accent-pink);
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary-outline:hover {
+    background-color: var(--accent-pink);
+    color: var(--white);
+}
+
+/* --- Header --- */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--accent-pink);
+}
+
+.nav-links {
+    list-style: none;
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 140px 5% 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #fff 0%, var(--primary-pink) 100%);
+    min-height: 80vh;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    color: var(--deep-pink);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero-image {
+    margin-top: 40px;
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.sunflower-accent {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 4rem;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+    animation: bounce 3s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(10deg); }
+}
+
+/* --- Order Section --- */
+.order-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--accent-pink);
+}
+
+.order-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid rgba(240, 98, 146, 0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #f1f1f1;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-pink);
+    box-shadow: 0 0 10px rgba(240, 98, 146, 0.1);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #25d366; /* WhatsApp Green */
+    color: white;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-submit:hover {
+    background-color: #128c7e;
+    transform: translateY(-2px);
+}
+
+/* --- Floating WhatsApp --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid var(--primary-pink);
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--accent-pink);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- Responsive --- */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        padding: 160px 10% 100px;
+        justify-content: space-between;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-image {
+        margin-top: 0;
+        max-width: 500px;
+    }
+}
